@@ -1,0 +1,44 @@
+.venv/
+__pycache__/
+*.py[cod]
+work/
+browser-profiles/
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.zip
+
+.gradle/
+**/build/
+local.properties
+*.jks
+*.keystore
+*.apk
+*.aab
+
+# Never version APK private signing material
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.password.dpapi
+
+# Local development and signing artifacts
+/docs/
+/dist/
+/.kotlin/
+/.idea/
+.env*
+*.jsonl
+*.sqlite
+*.key
+*.pem
+
+# Local audit and signing evidence
+/artifacts/
+*.log
+*.sqlite-*
+.hoyoreminder-signing/
+main-backup-receipt.json
+/cookies.json

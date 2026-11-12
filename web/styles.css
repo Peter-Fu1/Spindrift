@@ -1,0 +1,125 @@
+:root{font-family:"Segoe UI","Microsoft YaHei",sans-serif;color:#17283c;background:#f7f9fc;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{cursor:pointer;border:0;border-radius:8px;padding:10px 16px;background:#e9f1fd;color:#1767bc}button:hover{background:#d4e5fc}button:disabled{opacity:.45;cursor:wait}button:focus-visible,input:focus-visible{outline:3px solid #74b2ff;outline-offset:3px}header{height:82px;background:#1976dc;color:white;display:flex;align-items:center;justify-content:space-between;padding:0 32px;box-shadow:0 2px 8px #17365c1a;position:sticky;top:0;z-index:3}h1{font-size:25px;font-weight:650;letter-spacing:-.6px;margin:0}nav{display:flex;gap:12px}nav button{background:transparent;color:white;font-size:28px;width:48px;height:48px;padding:0}nav button:hover{background:#ffffff25}#avatar{display:flex;align-items:center;justify-content:center}img.avatar{width:36px;height:36px;border-radius:50%;object-fit:cover}main{max-width:1120px;margin:32px auto;padding:0 24px}.group{margin-bottom:20px}.group-heading{display:flex;width:100%;align-items:center;gap:14px;text-align:left;padding:18px 22px;background:#e8f2ed;color:#234c3c;border:1px solid #d2e5d9;border-radius:10px}.group-heading:hover{background:#dcece2}.group-heading strong{font-size:19px}.group-heading small{color:#688275;font-size:13px}.chevron{transition:transform .15s}.group-heading[aria-expanded=true] .chevron{transform:rotate(90deg)}.cards{padding:14px 0 0 36px;display:grid;gap:14px}.card{border:1px solid #e3e7ee;border-left:4px solid var(--accent);background:white;border-radius:10px;padding:22px 26px}.card h3{font-size:17px;margin:0 0 20px;display:flex;flex-wrap:wrap;gap:9px;align-items:center}.card h3 small{font-size:13px;font-weight:400;color:#748196}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:30px}.resource strong{font-size:29px}.resource strong small{font-size:16px;color:#8b95a3;font-weight:400}.resource p{font-size:13px;color:#748196;margin-bottom:0}.bar{height:6px;background:#edf0f4;border-radius:3px;margin-top:12px;overflow:hidden}.bar i{display:block;height:100%;background:var(--accent)}.tasks{display:grid;gap:12px}.task{display:flex;justify-content:space-between;gap:16px;font-size:14px}.done{color:#25845b}.pending{color:#b77327}.muted{font-size:13px;line-height:1.7;color:#7c8797}.error{font-size:13px;color:#aa6731;margin-top:12px}#accountMenu{position:fixed;right:42px;top:76px;z-index:5;background:white;border:1px solid #e1e6ee;border-radius:12px;box-shadow:0 14px 40px #273e5926;width:290px;padding:8px}.account-row{display:flex;align-items:center}.account-select{background:white;color:#29394d;display:flex;align-items:center;gap:10px;flex:1;min-width:0;text-align:left;border-left:4px solid transparent;border-radius:4px}.account-select.selected{border-left-color:#1976dc;background:#eaf3ff}.account-select span{overflow:hidden;text-overflow:ellipsis}.remove{background:transparent;color:#8a95a5;font-size:18px;padding:8px}#addAccount{width:100%;margin-top:8px;border-top:1px solid #edf0f4;border-radius:0;background:white;text-align:left}dialog{border:1px solid #e1e6ee;border-radius:16px;box-shadow:0 24px 90px #102d5930;padding:28px;width:min(440px,calc(100% - 32px));color:inherit}dialog::backdrop{background:#142a464a}h2{font-size:20px;margin:0 0 24px;display:flex;justify-content:space-between;align-items:center}.close{font-size:24px;background:transparent;color:#738092;padding:0 8px}.tabs{display:flex;gap:10px;margin-bottom:24px}.tabs button{flex:1;background:#f0f3f7;color:#748196}.tabs .active{background:#1976dc;color:white}#qrPanel{text-align:center}#qrImage img{width:216px;max-width:100%}#qrStatus{font-size:14px}label{display:block;font-size:14px;margin:18px 0}input{display:block;border:1px solid #d9e1eb;border-radius:7px;padding:11px;width:100%;margin-top:8px}#notice{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#243950;color:white;border-radius:10px;padding:13px 20px;max-width:90vw;font-size:14px;z-index:10}#verifyGames{display:grid;gap:12px}[hidden]{display:none!important}@media(max-width:600px){header{height:66px;padding:0 12px}h1{font-size:19px}nav{gap:0}nav button{font-size:24px;width:38px;height:42px}main{margin:20px auto;padding:0 12px}.group-heading{padding:14px 12px;gap:10px}.group-heading strong{font-size:16px}.group-heading small{font-size:11px}.cards{padding-left:12px}.card{padding:18px 16px}.metrics{grid-template-columns:1fr;gap:22px}#accountMenu{right:12px;top:62px}.resource strong{font-size:26px}}
+
+.verify-role{display:grid;gap:8px}
+
+#refreshProgress{max-width:1060px;margin:18px auto 0;padding:12px 18px;background:#eaf3ff;border-radius:10px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+#refreshProgress[hidden]{display:none}#refreshSummary{flex:1}.refresh-state{font-size:.9rem;padding:8px 10px;border-radius:6px;background:#eef4ff}.refresh-state.success{color:#216f49;background:#ebf7ee}.refresh-state.failed,.refresh-state.waiting_for_user{color:#965c08;background:#fff4dc}
+
+
+html{overscroll-behavior-y:none}body{padding-bottom:0;min-height:100dvh}button{min-height:44px;touch-action:manipulation}dialog{max-height:calc(100dvh - 24px);overflow:auto}#qrImage{min-height:20px}header{min-height:66px;height:auto;gap:8px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}h1{overflow-wrap:anywhere}nav{flex-shrink:0;margin-left:auto}dialog{margin:auto}#accountMenu{max-width:calc(100vw - 24px);top:var(--toolbar-bottom,74px)}#diagnosticsOutput{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;max-height:40dvh;overflow:auto;user-select:text}@media(max-width:380px){.group-heading{flex-wrap:wrap}.group-heading small{margin-left:22px}.task{gap:8px}}
+
+/* Phone summary: energy and tasks side by side; natural growth for large text. */
+@media(max-width:600px){
+ header{min-height:58px;padding:6px 10px;flex-wrap:nowrap;gap:4px}
+ h1{font-size:18px;white-space:nowrap}
+ nav button{width:36px;min-height:44px;height:44px}
+ main{margin:8px auto;padding:0 10px}
+ .group{margin-bottom:10px}
+ .group-heading{padding:8px 10px;gap:7px;flex-wrap:wrap;min-height:44px}
+ .group-heading strong{font-size:14px}
+ .group-heading small{font-size:10px;margin-left:0;line-height:1.2}
+ .group-heading img.avatar{width:24px;height:24px}
+ .cards{padding:8px 0 0;gap:8px}
+ .card{padding:10px 12px;border-radius:9px}
+ .card h3{font-size:15px;line-height:20px;gap:2px;margin:0 0 7px}
+ .card h3 small{display:block;width:100%;font-size:11px;line-height:15px;overflow-wrap:anywhere}
+ .metrics{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:12px}
+ .resource{font-size:13px;line-height:18px;min-width:0}
+ .resource strong{font-size:26px;line-height:32px}
+ .resource strong small{font-size:13px}
+ .resource p{font-size:11px;line-height:15px;margin:4px 0 0}
+ .bar{height:4px;margin-top:4px}
+ .tasks{gap:5px;align-content:start}
+ .task{font-size:12px;line-height:20px;gap:5px}
+ .task b{white-space:nowrap}
+ .card p.muted,.card p.error{font-size:11px;line-height:16px;margin:6px 0 0;overflow-wrap:anywhere}
+ .card .refresh-state{font-size:11px;line-height:16px;padding:4px 6px;margin:6px 0 0}
+ #refreshProgress{font-size:12px;margin:8px 10px 0;padding:6px 10px;gap:6px}
+}
+@media(max-width:340px){h1{font-size:16px}header{padding-left:6px;padding-right:6px}nav button{width:32px}.metrics{gap:8px}.card{padding:10px}.task{font-size:12px}}
+
+#viewStatus{font-size:11px;line-height:20px;margin:0 10px;color:#46617b}
+.group-bar{display:flex;gap:3px;align-items:stretch}.group-heading{min-width:0;flex:1}
+.group-heading strong{min-width:0;overflow-wrap:anywhere}.sort-handle{padding:0 6px;width:30px;flex-shrink:0;touch-action:none}
+.avatar-placeholder{width:24px;height:24px;display:inline-flex;flex-shrink:0;align-items:center;justify-content:center;color:#6b8095}
+.card-heading{display:flex;align-items:center;gap:6px;margin-bottom:5px}.card-heading h3{flex:1;min-width:0;margin:0}
+.card-heading img.avatar{width:26px;height:26px;flex-shrink:0}.card-refresh{min-width:36px;min-height:44px;padding:0;font-size:22px;flex-shrink:0}
+#filterDialog label{display:flex;gap:8px;align-items:center;overflow-wrap:anywhere;margin:8px 0;padding:3px;min-height:44px}
+#filterDialog input{display:inline-block;width:auto;margin:0;flex-shrink:0}
+#filterDialog img.avatar{width:24px;height:24px}.filter-actions{display:flex;flex-wrap:wrap;gap:6px}
+fieldset{border:1px solid #d9e1eb;border-radius:8px}.drop-target{outline:2px solid #1976dc}.drag-ready{background:#abd1ff}
+@media(max-width:600px){
+ header{flex-wrap:wrap}.group-heading{padding:6px 8px}.card{padding:7px 10px}
+ .card-heading h3 small{font-size:10px;line-height:13px}.card-heading h3{font-size:14px;line-height:17px}
+ .resource strong{font-size:24px;line-height:28px}.resource p{font-size:10px;line-height:14px}
+ .card p.muted,.card p.error{font-size:10px;line-height:14px;margin-top:4px}
+ .metrics{gap:8px}.tasks{gap:3px}.task{font-size:11px;line-height:19px}
+}
+
+/* Shared stage37 navigation and independent check-in UI. */
+[hidden]{display:none!important}svg{vertical-align:middle}#pageNav{position:fixed;left:0;top:var(--toolbar-bottom,82px);bottom:0;width:128px;background:#edf3fb;padding:16px 6px;z-index:2;display:flex;flex-direction:column;gap:8px}
+#pageNav button{display:flex;gap:7px;align-items:center;text-align:left;padding:12px 8px;color:#415b79}#pageNav [aria-current=page]{background:#cfe2fb;color:#125da8;font-weight:650}
+#resourcePage,#checkinPage{margin-left:128px}#checkinPage{max-width:900px;padding:12px 24px}
+.account-checkin{flex-shrink:0;min-height:44px;padding:6px 10px;font-size:18px;display:flex;align-items:center;gap:4px}.account-checkin span{font-size:12px}
+.checkin-card{background:white;border:1px solid #dde6f1;border-radius:12px;padding:18px;overflow-wrap:anywhere}.checkin-card h3{margin:4px 0}.reward-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;margin:16px 0}.reward{border:1px solid #e0e5ef;border-radius:8px;padding:6px 3px;display:flex;align-items:center;flex-direction:column;min-width:0;font-size:12px;text-align:center}.reward img{width:40px;height:40px;object-fit:contain}.reward small{font-size:10px;color:#7c8797}.reward-day{font-size:10px;color:#7c8797}
+#checkinChoices select{max-width:100%;width:100%;padding:10px}#accountCheckinDialog label{display:flex;align-items:center;gap:8px;min-height:44px}#accountCheckinDialog input,#checkinDetail input{width:auto}
+#smsPanel label{display:block;margin:10px 0}#smsPanel input{display:block;width:100%;padding:9px}#smsPanel select{padding:8px}.login-tabs{display:flex;gap:8px;margin-bottom:12px}
+@media(max-width:600px){
+ #pageNav{top:var(--toolbar-bottom,70px);width:32px;padding:8px 0}#pageNav button{padding:8px 0;min-height:44px;justify-content:center}#pageNav span{display:none}
+ #resourcePage,#checkinPage{margin-left:32px}#checkinPage{padding:10px 8px}
+ .account-checkin{padding:4px 6px;min-width:32px}.account-checkin span{display:none}
+ .group-heading{gap:5px;min-width:0;flex-wrap:wrap}.group-heading strong{font-size:13px}.group-heading small{font-size:10px}
+ .reward-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}.checkin-card{padding:10px}
+}
+@media(prefers-color-scheme:dark){#pageNav{background:#192b43}#pageNav button{color:#cce0fa}#pageNav [aria-current=page]{background:#274a75;color:#fff}}
+
+/* Stage38 shared navigation: desktop remembered, mobile overlay, no requests. */
+header{gap:8px}header h1{margin-right:auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#menuToggle{color:white;background:transparent;display:flex;align-items:center;justify-content:center;width:44px;height:44px;flex-shrink:0;padding:0}header nav{flex-shrink:0}
+#pageNav{z-index:8;top:var(--toolbar-bottom,82px);bottom:0;width:164px;transform:translateX(-100%);visibility:hidden;transition:transform .15s;overflow:auto}body.nav-open #pageNav{transform:none;visibility:visible}#pageNav button{width:100%;min-height:48px;display:flex;gap:8px;align-items:center;justify-content:flex-start;padding:10px}#pageNav span{display:inline}#pageNav svg{flex-shrink:0}
+#resourcePage,#checkinPage{margin-left:0}body.nav-open #resourcePage,body.nav-open #checkinPage{margin-left:164px}#navBackdrop{position:fixed;inset:var(--toolbar-bottom,70px) 0 0;background:#132b4d70;z-index:7;border-radius:0;cursor:default}
+#resignDialog button{min-height:44px}.checkin-actions{display:flex;flex-wrap:wrap;gap:8px}.checkin-actions button{min-height:44px}.checkin-history{margin-top:18px;border-top:1px solid #dde6f1;padding-top:12px}.checkin-history summary{cursor:pointer;line-height:1.8;min-height:44px}.reward.estimated{border-color:#c89b53;background:#fff8e9}.reward.estimated small{color:#846022}.checkin-outcome{font-size:12px;margin:5px 0;color:#596d84}
+@media(max-width:600px){header{padding:0 6px;gap:3px}header h1{font-size:16px;letter-spacing:-.5px}header nav{gap:0}header nav button{width:31px;height:44px;font-size:25px}#menuToggle{width:30px;height:44px}#filter svg{width:23px}#pageNav{top:var(--toolbar-bottom,70px);width:min(230px,80vw);padding:12px}#pageNav button{padding:12px;justify-content:flex-start}#pageNav span{display:inline}body.nav-open #resourcePage,body.nav-open #checkinPage{margin-left:0}#resourcePage,#checkinPage{margin-left:0}#checkinPage{padding:10px 12px}}
+@media(prefers-reduced-motion:reduce){#pageNav{transition:none}}
+
+.card .checkin-outcome{margin:0;font-size:10px;line-height:14px;color:#596d84}
+
+@media(min-width:900px){.cards{grid-template-columns:repeat(auto-fit,minmax(225px,1fr));padding-left:0}.card{padding:16px}.metrics{grid-template-columns:1fr;gap:14px}.card-heading h3 small{font-size:12px}.tasks{gap:8px}}
+
+/* Grouped check-in selector: independent selection, full error codes, responsive rows. */
+.checkin-selection-tools,.checkin-group-heading{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.checkin-selection-tools{margin:10px 0}.checkin-selection-tools label,.checkin-group-heading label{display:flex;align-items:center;gap:8px;min-height:44px;min-width:0;overflow-wrap:anywhere}.checkin-selection-tools input,.checkin-group input{width:auto;flex-shrink:0}.checkin-group{background:#fff;border:1px solid #dce5ef;border-radius:10px;margin:12px 0;min-width:0}.checkin-group-heading{padding:8px;background:#e8f3ed;border-radius:10px}.checkin-group-heading small{font-size:11px;overflow-wrap:anywhere}.checkin-group-heading button{margin-left:auto;min-width:44px;min-height:44px}.checkin-role-row{display:flex;gap:8px;align-items:center;padding:9px;border-top:1px solid #e4eaf1;min-width:0;flex-wrap:wrap}.checkin-role-row label{display:flex;gap:8px;align-items:center;min-width:0;flex:1 1 180px;overflow-wrap:anywhere;min-height:44px}.checkin-role-row small{display:block;font-size:11px;color:#6b7d91;overflow-wrap:anywhere}.checkin-role-status{font-size:13px;overflow-wrap:anywhere;flex:1 1 100px}.checkin-role-row button{min-height:44px}.checkin-role-row span{min-width:0}.checkin-group .avatar,.checkin-role-row .avatar-placeholder{flex-shrink:0}.checkin-group-heading strong{overflow-wrap:anywhere}.checkin-history summary{overflow-wrap:anywhere}
+@media(max-width:600px){.checkin-role-row{gap:6px}.checkin-role-row label{flex-basis:180px}.checkin-role-status{flex-basis:170px;margin-left:34px}.checkin-group-heading small{width:100%;order:2}.checkin-group-heading label{flex:1}.checkin-group-heading button{flex-shrink:0}.checkin-actions button{font-size:13px;padding:8px}.checkin-history .reward-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* Shared mode controls and route title; no data or transport dependency. */
+#pageTitle{display:flex;align-items:center;gap:7px;overflow:visible;white-space:normal;line-height:1.25}#pageTitle svg{width:23px;height:23px;flex-shrink:0}#pageTitle span:last-child{overflow-wrap:anywhere}.checkin-mode-row,.checkin-mode-all{display:flex;gap:8px;align-items:center;min-height:44px;overflow-wrap:anywhere}.checkin-mode-row input,.checkin-mode-all input{width:auto;flex-shrink:0}#checkinModeOptions fieldset,#autoCheckinOptions fieldset{min-width:0}#checkinModeOptions legend{overflow-wrap:anywhere}#checkinModeDialog{max-width:520px}#profileBatchStatus{overflow-wrap:anywhere}#chooseCheckinMode{min-height:44px}
+@media(max-width:600px){#pageTitle{font-size:16px;gap:4px;flex:1}#pageTitle svg{width:19px;height:19px}.checkin-actions{gap:5px}}
+
+#autoCheckinStatus{font-size:12px;margin:4px 12px;color:var(--muted,#567)}
+
+/* Status title and outcome are semantic rows, including wide windows and large fonts. */
+#autoCheckinStatus,#viewStatus{display:flex;flex-direction:column;align-items:stretch;height:auto;min-width:0;overflow-wrap:anywhere;gap:3px}
+#autoCheckinStatus[hidden]{display:none}
+.status-heading,.status-result{display:block;min-width:0;max-width:100%;white-space:normal}
+.status-result[hidden]{display:none}
+
+/* Resource overview ends with automatic check-in status; drawer follows the actual toolbar. */
+#resourcePage{display:flex;flex-direction:column;min-height:calc(100dvh - var(--toolbar-bottom,82px))}
+#resourcePage>#groups{width:100%}
+#resourcePage>#autoCheckinStatus{margin-top:auto;padding-top:8px;padding-bottom:12px}
+
+/* A single resource hint; the automatic check-in summary keeps its two rows/footer. */
+#viewStatus{display:block;line-height:1.6;margin:3px 10px}
+.metrics{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);column-gap:28px;row-gap:4px}
+.resource{grid-column:1;grid-row:1;min-width:0}
+.metrics>.tasks{grid-column:2;grid-row:1 / span 2;min-width:0}
+.resource-times{grid-column:1;grid-row:2;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 12px;font-size:13px;line-height:1.5;margin:0;min-width:0;color:#748196}
+.resource-times span{min-width:0;overflow-wrap:anywhere}
+@media(max-width:600px){
+ .metrics{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);column-gap:14px;row-gap:4px}
+ .metrics>.tasks{grid-row:1;gap:3px}
+ .task{line-height:18px;overflow-wrap:anywhere}.task b{white-space:normal}
+ .resource-times{grid-column:1 / -1;grid-row:2;font-size:11px;line-height:16px}
+}
+
+@media(min-width:900px){.cards{grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr))}}
+
+@media(max-width:600px){.card{padding-top:5px;padding-bottom:5px}}

@@ -1,0 +1,7 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {createRequire} from 'node:module';const require=createRequire(import.meta.url);const ui=require('../../web/ui-model.js');
+const accounts=['A','B','C'].map(id=>({id,roles:(id==='B'?['genshin']:['genshin','starrail','zenless']).map(game=>({game,uid:'100000001',serverId:'cn_gf01'}))}));
+test('checkin all is dynamic, subset is explicit and empty never expands',()=>{
+ const all=ui.checkinKeys(accounts,{mode:'all'});assert.equal(all.length,7);assert.equal(ui.checkinKeys(accounts,{mode:'subset',roleKeys:[]}).length,0);assert.deepEqual(ui.checkinKeys(accounts,{mode:'subset',roleKeys:[all[0],all[3],all[6]]}),[all[0],all[3],all[6]]);
+ const more=structuredClone(accounts);more[1].roles.push({game:'starrail',uid:'100000001',serverId:'prod_gf_cn'});assert.equal(ui.checkinKeys(more,{mode:'all'}).length,8);assert.equal(ui.checkinKeys(more,{mode:'subset',roleKeys:all}).length,7);more[0].roles=[];assert.ok(!ui.checkinKeys(more,{mode:'subset',roleKeys:all}).includes(all[0]));
+});
+test('same UID remains isolated by owner/game/server; resource exclusions never affect checkin',()=>{const extra=structuredClone(accounts);extra[0].roles.push({game:'genshin',uid:'100000001',serverId:'cn_qd01'});const keys=ui.checkinKeys(extra);assert.equal(new Set(keys).size,8);assert.equal(ui.targets(accounts,ui.normalize({accountIds:[],roleKeys:[]},accounts)).length,0);assert.equal(ui.checkinKeys(accounts).length,7);});

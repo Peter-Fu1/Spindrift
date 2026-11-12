@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "applicationId": "io.github.peterfu.hoyoreminder",
+  "releases": [
+    {
+      "applicationId": "io.github.peterfu.hoyoreminder",
+      "versionName": "1.0.0",
+      "versionCode": 20,
+      "certificateSha256": "9b4b7d26608e9751d73ec6147e7a4c3690f97c529b4dc5f7a95cf530ae563774",
+      "apkSha256": "1016b87468ffedb10212151042b52a5e813d8f1d36601bdf25ed8d93abea6e14",
+      "sourceRevision": "e7adc374ab73fcaea688b8178c40597d6c271663",
+      "date": "2026-11-12T14:12:32.076733+00:00",
+      "status": "released"
+    }
+  ]
+}

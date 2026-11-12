@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src data:; connect-src 'self' ws://127.0.0.1:* ws://localhost:* ws://[::1]:*; frame-src 'self' about:; object-src 'none'; base-uri 'self'; form-action 'none'">
+<title>HoYoReminder · 本地 UI Preview</title><link rel="stylesheet" href="preview.css"><script src="loader.js" defer></script></head>
+<body><header><h1>Android UI Preview</h1><p>仅本地虚拟数据 · 不连接米游社 · 刷新后恢复默认 · 与 APK 的 Preview 构建无关</p>
+<div class="controls"><button id="enable">开启本地预览</button><label>场景<select id="scenario"><option value="default">默认：三游戏 + 多账号</option><option value="genshin-only">仅原神角色</option><option value="errors">错误与上次成功缓存</option><option value="empty">未登录空白</option><option value="long-text">长昵称与区服</option><option value="checkin">签到明细与奖励</option><option value="login">登录弹窗（操作禁用）</option></select></label>
+<label>视口<select id="viewport"><option value="393x780">手机 393 × 780</option><option value="360x740">手机 360 × 740</option><option value="412x820">手机 412 × 820</option><option value="1280x900">桌面 1280 × 900</option></select></label><button id="reset">重置当前场景</button></div><p id="status" role="status">从 Live Server 打开本页，点击“开启本地预览”。</p></header>
+<main id="stage"><iframe id="uiPreview" title="正式 Android UI · 虚拟数据预览" sandbox="allow-scripts allow-same-origin allow-forms"></iframe></main>
+</body></html>

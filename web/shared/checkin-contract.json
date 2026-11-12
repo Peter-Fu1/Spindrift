@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "region": "CN",
+  "key": [
+    "accountId",
+    "game",
+    "roleUid",
+    "server",
+    "CN"
+  ],
+  "activities": {
+    "genshin": {
+      "base": "https://api-takumi.mihoyo.com/event/luna/",
+      "actId": "e202311201442471",
+      "signgame": "hk4e"
+    },
+    "starrail": {
+      "base": "https://api-takumi.mihoyo.com/event/luna/",
+      "actId": "e202304121516551",
+      "signgame": "hkrpg"
+    },
+    "zenless": {
+      "base": "https://act-nap-api.mihoyo.com/event/luna/zzz/",
+      "actId": "e202406242138391",
+      "signgame": "zzz"
+    }
+  },
+  "states": [
+    "unknown",
+    "loading_info",
+    "not_signed",
+    "already_signed",
+    "signing",
+    "verifying_result",
+    "signed",
+    "unsupported",
+    "login_expired",
+    "blocked",
+    "failed",
+    "unconfirmed"
+  ],
+  "operations": {
+    "info": "GET",
+    "home": "GET",
+    "sign": "POST"
+  },
+  "autoDefault": false,
+  "resignEnabled": false
+}

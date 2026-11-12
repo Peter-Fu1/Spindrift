@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "applicationId": "io.github.peterfu.hoyoreminder",
+  "keyId": "main-release-v1",
+  "alias": "main-release-v1",
+  "certificateSha256": "9b4b7d26608e9751d73ec6147e7a4c3690f97c529b4dc5f7a95cf530ae563774",
+  "signatureSchemes": [
+    "v2",
+    "v3"
+  ],
+  "firstVersionCode": 18,
+  "allowedVariant": "release",
+  "minimumSdk": 28,
+  "state": "locked"
+}
